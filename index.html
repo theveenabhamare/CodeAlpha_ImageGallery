@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Aesthetic Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>✨ Aesthetic Image Gallery ✨</h1>
+
+<div class="buttons">
+  <button onclick="filterSelection('all')">All</button>
+  <button onclick="filterSelection('nature')">Nature</button>
+  <button onclick="filterSelection('fruits')">Fruits</button>
+  <button onclick="filterSelection('cars')">Cars</button>
+  <button onclick="filterSelection('cartoons')">Cartoons</button>
+</div>
+
+<div class="gallery">
+
+  <!-- Nature -->
+  <img src="./images/nature1.jpg" class="gallery-item nature" onclick="openLightbox(this)">
+  <img src="./images/nature2.jpg" class="gallery-item nature" onclick="openLightbox(this)">
+
+  <!-- Fruits -->
+  <img src="./images/fruit1.jpg" class="gallery-item fruits" onclick="openLightbox(this)">
+  <img src="./images/fruit2.jpg" class="gallery-item fruits" onclick="openLightbox(this)">
+
+  <!-- Cars -->
+  <img src="./images/car1.jpg" class="gallery-item cars" onclick="openLightbox(this)">
+  <img src="./images/car2.jpg" class="gallery-item cars" onclick="openLightbox(this)">
+
+  <!-- Cartoons -->
+  <img src="./images/cartoon1.jpg" class="gallery-item cartoons" onclick="openLightbox(this)">
+  <img src="./images/cartoon2.jpg" class="gallery-item cartoons" onclick="openLightbox(this)">
+
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox">
+  <span class="close" onclick="closeLightbox()">❌</span>
+  <span class="prev" onclick="prevImage()">⬅</span>
+
+  <img id="lightbox-img" alt="Preview">
+
+  <span class="next" onclick="nextImage()">➡</span>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
